@@ -34,6 +34,6 @@ jobs:
           git remote set-url origin https://Jack-Zhang-1314:${{secrets.ACTION_ACCESS}}@github.com/Jack-Zhang-1314/CSS
           git checkout -b page
           cd docs/.vuepress/dist
-          git add .
+          git add -A
           git commit -m "build docs"
-          git push -u origin page
+          git push -f origin page
