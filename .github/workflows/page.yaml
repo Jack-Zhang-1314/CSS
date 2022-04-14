@@ -33,6 +33,7 @@ jobs:
           git config --local user.name "Jack-Zhang-1314"
           git remote set-url origin https://Jack-Zhang-1314:${{secrets.ACTION_ACCESS}}@github.com/Jack-Zhang-1314/CSS
           git checkout -b page
-          git add ./docs/.vuepress/dist
+          cd docs/.vuepress/dist
+          git add .
           git commit -m "build docs"
-          git push -f origin page
+          git push -u origin page
